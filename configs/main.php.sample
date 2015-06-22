@@ -1,0 +1,30 @@
+<?php
+/**
+ * уникальный ключ этого сайта
+ */
+$GLOBALS['SEOSHIELD_CONFIG']['access_key'] = 'd5cd6bdf7de71edc1572b07d89307b60c8698244746bf4f85828e7388564c594';
+
+/**
+ * параметры выборки контентной области сайта (то место где размещается основной текст)
+ * контетных областей может быть несколько, поэтому в массиве мы перечисляем типы и параметры выборки
+ */
+$GLOBALS['SEOSHIELD_CONFIG']['content_area_selector'] = array(
+    array(
+        'type' => 'regex',
+        'pattern' => '#<div[^>]*content-area[^>]*>.*?</div>#is',
+    ),
+);
+
+// настройки для подключения к базе mysql
+$GLOBALS['SEOSHIELD_CONFIG']['mysql']=array(
+	"host"=>"localhost", // хост для подключения к mysql
+	"db"=>"bfshinaA", // имя базы mysql
+	"user"=>"u_bfshinaA", // пользователь mysql
+	"password"=>"n8haitIn" // пароль
+);
+
+// URL текущей страницы (можно оставить как есть, если нет проблем)
+$GLOBALS['SEOSHIELD_CONFIG']['page_uri']=$_SERVER['REQUEST_URI'];
+
+// кодировка контента сайта по умолчанию
+$GLOBALS['SEOSHIELD_CONFIG']['site_default_encoding']="utf-8";
